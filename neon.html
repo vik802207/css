@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .glow-box {
+        width: 30em;
+        height: 20em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 10px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        border: 0.5px solid red;
+      }
+      
+      .glow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.4;
+        background: radial-gradient(circle at var(--x) var(--y) , rgba(0, 241, 205, 0.25) 10%, transparent 300px);
+       
+    
+      }
+      .x {
+        animation: vik 3s linear infinite;
+        background: linear-gradient(to right,#54454a,#455746,#222923);
+        background-clip: text;
+       -webkit-background-clip: text;
+        background-size: 200%;
+        color: transparent;
+    }
+     @keyframes vik {
+        0% {
+            background-position: 0;
+        }
+        100% {
+            background-position: -100%;
+        }
+        
+     }
+      
+      
+  </style>
+  <title>Neon Text Effect</title>
+</head>
+<body>
+    <div class="glow-box" id="a">
+        <h1 class="x">Hover me</h1>
+        <div class="glow"></div>
+      </div>
+      <script src="./neon.js">
+        
+      </script>
+</body>
+</html>
